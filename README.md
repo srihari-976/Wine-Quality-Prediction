@@ -1,6 +1,6 @@
 # Wine Quality Predictor
 
-A machine learning application that predicts the quality of red wine based on its physicochemical properties. The model uses a Random Forest Classifier to predict wine quality on a scale of 0-8.
+A machine learning application that predicts the quality of red wine based on its physicochemical properties. The model uses an optimized Random Forest Classifier to predict wine quality on a scale of 0-8.
 
 ## Features
 
@@ -8,6 +8,18 @@ A machine learning application that predicts the quality of red wine based on it
 - Simple and intuitive user interface
 - Shows feature importance for predictions
 - Real-time quality assessment
+- Optimized model using GridSearchCV
+- Feature importance visualization
+
+## Model Performance
+
+The model achieves an accuracy of approximately 66.56% on the test set, with the following performance metrics:
+- Best cross-validation score: 69.28%
+- Best parameters: 
+  - n_estimators: 300
+  - max_depth: 20
+  - min_samples_split: 5
+  - min_samples_leaf: 1
 
 ## Example Cases
 
@@ -125,6 +137,15 @@ python train.py
 streamlit run app.py
 ```
 
-## Model Performance
+## Model Details
 
-The model achieves an accuracy of approximately 66% on the test set. This is a reasonable performance considering the complexity of wine quality prediction and the subjective nature of wine tasting. 
+The model uses a Random Forest Classifier with the following optimizations:
+- Grid Search Cross-Validation for hyperparameter tuning
+- StandardScaler for feature scaling
+- Feature importance analysis
+- Performance metrics including accuracy, precision, recall, and F1-score
+
+The model's performance varies across different quality levels:
+- Best performance on average quality wines (5/8)
+- Moderate performance on good (6/8) and very good (7/8) wines
+- Limited performance on extreme quality levels (3/8, 4/8, 8/8) due to class imbalance 
