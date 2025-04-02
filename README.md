@@ -2,6 +2,12 @@
 
 A machine learning application that predicts the quality of red wine based on its physicochemical properties. The model uses an optimized Random Forest Classifier to predict wine quality on a scale of 0-8.
 
+## Deployed Application
+
+🚀 **Check out the live version of Email SMS Spam Classifier Model!** 🚀
+
+[![Live Application](https://img.shields.io/badge/Live%20Application-Click%20Here-brightgreen)](https://wine-quality-predictione.streamlit.app/)
+
 ## Features
 
 - Predicts wine quality based on 11 physicochemical properties
